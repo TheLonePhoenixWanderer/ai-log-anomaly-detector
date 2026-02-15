@@ -14,3 +14,7 @@ Modern SOC environments generate millions of authentication events daily. Identi
 - Public IP login attempts
 
 This project simulates that environment and uses **unsupervised anomaly detection** to automatically identify high-risk events. 
+
+Architecture 
+------------
+**1. Synthetic Log Generation**
