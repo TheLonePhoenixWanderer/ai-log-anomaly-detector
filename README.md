@@ -45,3 +45,11 @@ Architecture
 **5. Output**
 - Full log dataset
 - Flaggedd anomalies with human-readable "reason strings"
+
+Tech Stack
+----------
+- Python 3.10+
+- pandas
+- numpy
+- scikit-learn
+- Isolation Forest (unsupervised anomaly detection)
