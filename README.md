@@ -22,3 +22,22 @@ Architecture
 - Business hour bias
 - Realistic IP distributions
 - User home-country mapping
+**2. Anomaly Injection**
+- Impossible travel
+- Off-hours login bursts
+- Public IP + country mismatch + failures
+**3. Feature Engineering**
+- Hour of login
+- Day of week
+- Internal vs public IP
+- Country mismatch
+- Rolling 30-minute failure counts
+- Rolling 30-minute event rate
+- Encoded device / auth / country buckets
+**4. Model Training**
+- IsolationForest (unsupervised)
+- Risk scoring via inverted anomaly score
+- Top 2% highest-risk events flagged
+**5. Output**
+- Full log dataset
+- Flaggedd anomalies with human-readable "reason strings"
