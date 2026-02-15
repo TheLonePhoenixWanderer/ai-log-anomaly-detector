@@ -152,7 +152,7 @@ def inject_anomalies(ctx: OrgContext, df: pd.DataFrame) -> pd.DataFrame:
 
     # Split anomalies roughly into types
     types = np.random.choice(["impossible_travel", "offhours_burst", "new_country_fail"], size=n_anom, p=[0.35, 0.35, 0.30])
-    df.locp[anom_indicies, "anomaly_type"] = types
+    df.loc[anom_indicies, "anomaly_type"] = types
 
     # Type 1: Impossible travel
     travel_idx = anom_indicies[types == "impossible_travel"]
@@ -183,8 +183,12 @@ def inject_anomalies(ctx: OrgContext, df: pd.DataFrame) -> pd.DataFrame:
         ts = df.at[idx, "timestamp_utc"]
 
         # Force time to 02:00-04:59 UTC (still "off-hours" generally)
-        forced = ts.to_pydatetime().replace(hour=int(np.random.randint(2, 5)), minute=int(np.random.randint(0, 60)), second=int(np.random.randint(0, 60)))
-        df.at[idx, "timestamp_utc"] = pd.Timestamp(forced, tz="UTC")
+        forced = ts.replace(
+            hour=int(np.random.randint(2, 5)),
+            minute=int(np.random.randint(0, 60)),
+            second=int(np.random.randint(0, 60))
+        )
+        df.at[idx, "timestamp_utc"] = forced
         df.at[idx, "src_ip"] = np.random.choice(random_ip_public(50))
         df.at[idx, "auth_type"] = "Password"
         df.at[idx, "success"] = 0
@@ -194,7 +198,7 @@ def inject_anomalies(ctx: OrgContext, df: pd.DataFrame) -> pd.DataFrame:
         rows = []
         for k in range(burst_n):
             r = df.loc[idx].copy()
-            r["timestamp_utc"] = pd.Timestamp(forced, tz="UTC") + pd.Timedelta(seconds=int(k * np.random.randint(5, 20)))
+            r["timestamp_utc"] = forced + pd.Timedelta(seconds=int(k * np.random.randint(5, 20)))
             r["success"] = 0
             r["anomaly_type"] = "offhours_burst_member"
             rows.append(r)
@@ -330,7 +334,7 @@ def explain_row(row: pd.Series) -> list[str]:
 
     reasons = []
 
-    if row["success"] == 0 and row["recent_failiures_30m"] >= 3:
+    if row["success"] == 0 and row["recent_failures_30m"] >= 3:
         reasons.append("Multiple recent failures (30m)")
     if row["hour"] <= 5 or row["hour"] >= 22:
         reasons.append("off-hours login time")
