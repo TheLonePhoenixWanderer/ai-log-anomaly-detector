@@ -18,3 +18,7 @@ This project simulates that environment and uses **unsupervised anomaly detectio
 Architecture 
 ------------
 **1. Synthetic Log Generation**
+- 7 days of authentication activity
+- Business hour bias
+- Realistic IP distributions
+- User home-country mapping
