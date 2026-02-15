@@ -4,3 +4,5 @@ A Python-based anomaly detection engine that simulates authentication logs and d
 
 This project demonstrats how behavioural security analytics can be built from scratch - including log generation, anomaly injection, feature engineering, and model scoring.
 
+Project Overview
+----------------
