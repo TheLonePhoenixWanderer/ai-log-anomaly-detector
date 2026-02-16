@@ -56,11 +56,11 @@ Tech Stack
 
 Project Structure
 -----------------
-ai-log-anomaly-detector/
-│
-├── detector.py
-├── requirements.txt
-├── README.md
-└── output/
-    ├── logs.csv
-    └── anomalies.csv
+    ai-log-anomaly-detector/
+    │
+    ├── detector.py
+    ├── requirements.txt
+    ├── README.md
+    └── output/
+        ├── logs.csv
+        └── anomalies.csv
