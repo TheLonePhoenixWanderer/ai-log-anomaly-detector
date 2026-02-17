@@ -14,11 +14,13 @@ Even if the model is imperfect, this teaches the  *real pipeline shape*.
 
 Imports + global configuration
 ------------------------------
+
 ### Imports
 - numpy, pandas: data generation, transformation, time handling
 - dataclasses: clean container for org context
 - datetime, timezone, timedelta: time range generation
 - IsolationForest: anomaly detection model
+
 ### Key config variables
     RNG_SEED = 42
     N_USERS = 40
@@ -26,6 +28,7 @@ Imports + global configuration
     ANOMALY_RATE = 0.03
     OUT_DIR = "output"
     np.random.seed(RNG_SEED)
+
 ### Why we do this
 - **RNG_SEED** gives repeatability. Without it, every run produces totally different logs and anomalies, making debugging and tuning painful.
 - **N_USERS**, **N_EVENTS** controls dataset scale. 
@@ -44,6 +47,7 @@ OrgContext dataclass
         user_home_country: dict[str, str]
 
 This is your "organisation metadata".
+
 ### Why this matters
 In real systems, you always have "context":
 - user -> home office location
@@ -55,6 +59,7 @@ The model becomes much more meaningful when you simulate these realities.
 
 Utility functions
 -----------------
+
 ### ensure_out_dir
     def ensure_out_dir(path: str) -> None:
         os.makedirs(path, exist_ok=True)
