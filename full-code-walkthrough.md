@@ -63,6 +63,13 @@ Creates output folder if missing.
 
 **Why *exist_ok=True*:** avoids crashing if folder already exists.
 ___________________________________________
+### random_ip_private / random_ip_public
+You generate:
+- internal IPs in *10.x.x.x*
+- "public-like" IPs with non-private ranges
 
+Why do this?
+- internal vs external network source is a huge security signal
+- many org detections start with: "new external IP login"
 
 
