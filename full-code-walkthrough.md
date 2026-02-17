@@ -44,4 +44,13 @@ OrgContext dataclass
         user_home_country: dict[str, str]
 
 This is your "organisation metadata".
+### Why this matters
+In real systems, you always have "context":
+- user -> home office location
+- user -> normal device types
+- IP ranges -> corporate networks
+- normal geo distribution
+
+The model becomes much more meaningful when you simulate these realities.
+
 
