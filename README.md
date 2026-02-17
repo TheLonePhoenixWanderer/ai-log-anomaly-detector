@@ -96,3 +96,13 @@ Isolation Forest works well for:
 - Security analytics use cases
 
 Unlike rule-based systems, it learns patterns of "normal" behaviour and flags statistical outliers automatically. 
+
+Security Relevance
+------------------
+This project mirros real-world detection logic used in:
+- SIEM behavioural analytics
+- UEBA systems
+- Identity threat detection
+- DLP anomaly modelling
+
+It demonstrates how ML can enhance traditional detection engineering.
