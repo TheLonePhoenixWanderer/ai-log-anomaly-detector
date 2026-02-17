@@ -32,6 +32,6 @@ Imports + global configuration
 - **ANOMALY_RATE** controls how often you inject "anomalies". 
 - **OUT_DIR** keeps output tidy. 
 
-**Real-world note**: In reality you rearely know your anomaly rate. That's why unsupervised models are tricky - you pick a threshold that matches operational capacity (how many alerts per day can SOC triage).
+**Real-world note**: In reality you rarely know your anomaly rate. That's why unsupervised models are tricky - you pick a threshold that matches operational capacity (how many alerts per day can SOC triage).
 
 
