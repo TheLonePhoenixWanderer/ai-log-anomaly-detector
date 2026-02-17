@@ -64,3 +64,9 @@ Project Structure
     └── output/
         ├── logs.csv
         └── anomalies.csv
+
+How to Run
+----------
+###### 1. Create virtual environment
+    python -m venv .venv
+    source .venv/bin/activate
