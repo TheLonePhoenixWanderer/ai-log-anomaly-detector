@@ -79,3 +79,9 @@ Example Output
 --------------
 Console summary:
 ![detector.py console summary](/assets/console-summary.png)
+
+Saved outputs:
+- output/logs.csv
+- outputs/anomlies.csv
+
+Each anomaly includes 'explanation' tags such as:
