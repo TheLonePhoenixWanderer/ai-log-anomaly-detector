@@ -86,3 +86,12 @@ Saved outputs:
 
 Each anomaly includes 'explanation' tags such as:
 ![detector.py explanation tags](/assets/example-explanation-tags.png)
+
+Why Isolation Forest?
+---------------------
+Isolation Forest works well for:
+- High-dimensional behavioural data
+- Unlabelled datasets
+- Rare-event detection
+- Security analytics use cases
+Unlike rule-based systems, it learns patterns of "normal" behaviour and flags statistical outliers automatically. 
