@@ -14,3 +14,15 @@ Even if the model is imperfect, this teaches the  *real pipeline shape*.
 
 Imports + global configuration
 ------------------------------
+### Imports
+- numpy, pandas: data generation, transformation, time handling
+- dataclasses: clean container for org context
+- datetime, timezone, timedelta: time range generation
+- IsolationForest: anomaly detection model
+### Key config variables
+    RNG_SEED = 42
+    N_USERS = 40
+    N_EVENTS = 6000
+    ANOMALY_RATE = 0.03
+    OUT_DIR = "output"
+    np.random.seed(RNG_SEED)
