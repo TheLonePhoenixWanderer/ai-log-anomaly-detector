@@ -53,4 +53,15 @@ In real systems, you always have "context":
 
 The model becomes much more meaningful when you simulate these realities.
 
+Utility functions
+-----------------
+### ensure_out_dir
+    def ensure_out_dir(path: str) -> None:
+        os.makedirs(path, exist_ok=True)
+
+Creates output folder if missing.
+
+***Why *exist_ok=True*:** avoids crashing if folder already exists.
+
+
 
