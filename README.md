@@ -94,4 +94,5 @@ Isolation Forest works well for:
 - Unlabelled datasets
 - Rare-event detection
 - Security analytics use cases
+
 Unlike rule-based systems, it learns patterns of "normal" behaviour and flags statistical outliers automatically. 
