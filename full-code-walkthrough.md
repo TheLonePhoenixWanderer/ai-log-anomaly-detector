@@ -62,7 +62,7 @@ Utility functions
 Creates output folder if missing.
 
 **Why *exist_ok=True*:** avoids crashing if folder already exists.
-___________________________________________
+
 ### random_ip_private / random_ip_public
 You generate:
 - internal IPs in *10.x.x.x*
