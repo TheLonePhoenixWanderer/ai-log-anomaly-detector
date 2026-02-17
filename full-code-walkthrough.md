@@ -36,5 +36,12 @@ Imports + global configuration
 
 OrgContext dataclass
 --------------------
+    @dataclass
+    class OrgContext:
+        users: list[str]
+        ips_internal: list[str]
+        countries: list[str]
+        user_home_country: dict[str, str]
 
+This is your "organisation metadata".
 
