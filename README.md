@@ -85,3 +85,4 @@ Saved outputs:
 - outputs/anomlies.csv
 
 Each anomaly includes 'explanation' tags such as:
+![detector.py explanation tags](/assets/example-explanation-tags.png)
