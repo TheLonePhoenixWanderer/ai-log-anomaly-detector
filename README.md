@@ -72,4 +72,9 @@ How to Run
     source .venv/bin/activate
 ### 2. Install dependencies
     pip install -r requirements.txt
-    
+### 3. Run detector
+    python detector.py
+
+Example Output
+--------------
+Console summary:
