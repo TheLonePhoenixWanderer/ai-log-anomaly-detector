@@ -78,3 +78,4 @@ How to Run
 Example Output
 --------------
 Console summary:
+![detector.py console summary](/assets/console-summary.png)
