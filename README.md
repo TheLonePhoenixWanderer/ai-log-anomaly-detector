@@ -67,6 +67,6 @@ Project Structure
 
 How to Run
 ----------
-###### 1. Create virtual environment
+### 1. Create virtual environment
     python -m venv .venv
     source .venv/bin/activate
