@@ -9,3 +9,8 @@ Think of this as a mini security analytics pipeline:
 6. **Score everything** and flag the riskiest 2%
 7. **Add human-readable "reasons"** for each flagged event
 8. **Save to CSV** for inspection + future use
+
+Even if the model is imperfect, this teaches the  *real pipeline shape*.
+
+Imports + global configuration
+------------------------------
