@@ -106,3 +106,7 @@ This project mirros real-world detection logic used in:
 - DLP anomaly modelling
 
 It demonstrates how ML can enhance traditional detection engineering.
+
+Author
+------
+Built as a hands-on AI + cybersecurity mini-project to strengthen applied machine learning engineering skills
