@@ -120,3 +120,12 @@ Normal auth activity is not uniformly random. Business horu bias makes anomalies
 
 Just random users. In reality you might weight some users higher (admins, service accounts)
 
+### Source IP (internal vs public)
+    is_internal = np.random.rand(N_EVENTS) < 0.88
+    ip = internal if is_internal else public
+
+So 88% internal, 12% public.
+
+**Why?**
+
+Most logins come from office or VPN ranges. External logins happen, but less. 
