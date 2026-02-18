@@ -115,7 +115,7 @@ Then you bias toward business hours:
 
 Normal auth activity is not uniformly random. Business horu bias makes anomalies more meaningful. 
 
-## Users
+### Users
     users = np.random.choice(ctx.users, size=N_EVENTS)
 
 Just random users. In reality you might weight some users higher (admins, service accounts)
