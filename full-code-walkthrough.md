@@ -112,6 +112,7 @@ Then you bias toward business hours:
 - move 70% of off-hours events into 8am to 6pm
 
 **Why this matters?**
+
 Normal auth activity is not uniformly random. Business horu bias makes anomalies more meaningful. 
 
 
