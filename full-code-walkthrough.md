@@ -78,6 +78,7 @@ Why do this?
 make_context()
 --------------
 This sets up the simulated company environment:
+
     users = [f"user{i:02d}" for i in range(1, N_USERS + 1)]
     countries = ["AU", "NZ", "US", "GB", "SG", "DE", "IN", "JP"]
     home_choices = np.random.choice(countries, p=[...])
