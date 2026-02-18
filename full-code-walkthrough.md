@@ -129,3 +129,30 @@ So 88% internal, 12% public.
 **Why?**
 
 Most logins come from office or VPN ranges. External logins happen, but less. 
+
+### Country assignment
+    if rand < 0.93:
+        country = home
+    else:
+        country = random (other)
+
+**Interpretation**
+
+Most auth comes from home country. Some from elsewhere. 
+
+### Device + auth type
+    device = choice(["Windows","Macc","iOS","Android","Linux"], p=[...])
+    auth_type = choice(["Password","MFA","SSO"], p=[...])
+
+This creates diversity.
+
+### Outcome (success/failure)
+    base_fail = 0.06 if Password else 0.03
+    success = rand > base_fail
+
+Meaning:
+- password logins fail more often (fat-fingered passwords, brute forcing)
+- MFA/SSO fails less
+
+### Outcome dataframe
+This becomes your baseline dataset and is sorted by time.
