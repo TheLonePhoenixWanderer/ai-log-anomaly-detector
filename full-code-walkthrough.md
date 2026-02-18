@@ -96,4 +96,23 @@ This sets up the simulated company environment:
 - A smaller subset travel or work offshore
 - Internal IP space is consistent and repeated
 
+generate_base_logs(ctx)
+-----------------------
+This is the "normal activity generator".
+
+### Time range and timestamps
+    start = now - 7 (days)
+    end = now
+    ts = start + (end - start) * np.random.rand(N_EVENTS)
+
+This makes random timestamps across 7 days.
+
+Then you bias toward business hours:
+- identify events outside 7am to 8pm
+- move 70% of off-hours events into 8am to 6pm
+
+**Why this matters?**
+Normal auth activity is not uniformly random. Business horu bias makes anomalies more meaningful. 
+
+
 
