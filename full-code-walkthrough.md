@@ -75,4 +75,24 @@ Why do this?
 - internal vs external network source is a huge security signal
 - many org detections start with: "new external IP login"
 
+make_context()
+--------------
+This sets up the simulated company environment:
+    users = [f"user{i:02d}" for i in range(1, N_USERS + 1)]
+    countries = ["AU", "NZ", "US", "GB", "SG", "DE", "IN", "JP"]
+    home_choices = np.random.choice(countries, p=[...])
+    user_home_country = {u: hc for u, hc in zip(users, home_choice)}
+    ips_internal = random_ip_private(200)
+
+**What's happening?**
+- Create **user01..user40**
+- Define a country set
+- Assign most users to AU (biased distribution)
+- Generate 200 internal IPs
+
+**Security realism**
+- Most orgs have a dominant "home" region
+- A smaller subset travel or work offshore
+- Internal IP space is consistent and repeated
+
 
