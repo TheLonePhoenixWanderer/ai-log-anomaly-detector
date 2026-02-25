@@ -408,7 +408,6 @@ def main() -> None:
 
     print(f"\nSaved: {logs_path}")
     print(f"Saved: {anom_path}")
-    print("\nNext quick upgrade: plot risk_score over time per user + add 'impossible travel' rule-based detector.")
 
 if __name__ == "__main__":
     main()

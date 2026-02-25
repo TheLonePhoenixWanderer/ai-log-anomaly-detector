@@ -61,7 +61,7 @@ def detect_impossible_travel_pairs(
         cfg.user_col: flagged[cfg.user_col].values,
         "row_index_1": flagged["prev_row_index"].astype("Int64").values,
         "time_1": flagged["prev_time"].values,
-        "country_1": flagged("prev_country").values,
+        "country_1": flagged["prev_country"].values,
         "src_ip_1": flagged.get("prev_src_ip", pd.Series([pd.NA] * len(flagged))).values,
         "row_index_2": flagged["row_index"].astype("Int64").values,
         "time_2": flagged[cfg.time_col].values,
