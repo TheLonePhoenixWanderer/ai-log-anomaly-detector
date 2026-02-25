@@ -42,7 +42,17 @@ Architecture
 - Risk scoring via inverted anomaly score
 - Top 2% highest-risk events flagged
 
-**5. Output**
+**5. Rule-Based Detection Layer**
+- Detects impossible travel within 10 minutes
+- Flags both events in suspicious country transitions
+- Saves evidence pairs to *impossible_travel_pairs.csv*
+
+**6. Visualisation Layer**
+- Plots *risk_score* over time per user
+- Annotates highest anomaly spikes
+- Saves charts to /output/plots
+
+**7. Output**
 - Full log dataset
 - Flaggedd anomalies with human-readable "reason strings"
 
