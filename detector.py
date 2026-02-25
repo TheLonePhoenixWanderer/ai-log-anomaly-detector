@@ -362,11 +362,20 @@ def main() -> None:
 
     scored, feature_cols, thresh = train_and_score(logs)
 
+    scored, it_pairs = add_impossible_travel_flags(scored)
+    it_pairs.to_csv(os.path.join(OUT_DIR, "impossible_travel_pairs.csv"), index=False)
+
+    try:
+        plot_paths = plot_risk_over_time(scored, out_dir=OUT_DIR, top_k=5)
+    except ModuleNotFoundError as e:
+        plot_paths = []
+        print(f"\n[plot] Skipped (missing dependency): {e}")
+
     # Save full logs and anomalies
     logs_path = os.path.join(OUT_DIR, "logs.csv")
     scored.to_csv(logs_path, index=False)
 
-    anomalies = scored[scored["is_flagged_anomaly"] == 1].copy()
+    anomalies = scored[(scored["is_flagged_anomaly"] == 1) | (scored["is_impossible_travel"] == 1)].copy()
     anomalies["reasons"] = anomalies.apply(explain_row, axis=1).apply(lambda xs: "; ".join(xs))
     anomlies = anomalies.sort_values("risk_score", ascending=False)
 
