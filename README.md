@@ -62,6 +62,7 @@ Tech Stack
 - pandas
 - numpy
 - scikit-learn
+- matplotlib
 - Isolation Forest (unsupervised anomaly detection)
 
 Project Structure
