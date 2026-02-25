@@ -61,9 +61,18 @@ Project Structure
     ├── detector.py
     ├── requirements.txt
     ├── README.md
+    └── addons/
+    ├── __init__.py
+    ├── impossible_travel.py
+    └── risk_plotter.py
+    │
     └── output/
         ├── logs.csv
         └── anomalies.csv
+        ├── impossible_travel_pairs.csv
+        └── plots/
+            ├── risk_over_time_user01.png
+            └── ...
 
 How to Run
 ----------
